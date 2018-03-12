@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<script src="https://webapp.didistatic.com/static/webapp/shield/z/vue/vue/1.0.24/vue.min.js"></script>
+<div id="example">
+	<input type="text" v-model="didi" />
+	<input type="text" v-model="family" />
+	<br />
+	didi={{didi}}, <br />
+	family={{family}}, <br />
+	didiFamily={{didiFamily}}
+</div>
+<script>
+	var vm = new Vue({
+		el: '#example',
+		data: {
+			didi: '111',
+			family: '222'
+		},
+		computed: {
+			//	一个计算属性的getter
+			didiFamily: function() {
+				// this指向vm实例
+				return this.didi + this.family
+			}
+		}
+	})
+</script>
