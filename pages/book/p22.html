@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<script src="https://webapp.didistatic.com/static/webapp/shield/z/vue/vue/1.0.24/vue.min.js"></script>
+<body id="example">
+	<input v-model="msg" debounce="5000"><br/>
+	{{msg}}
+</body>
+<script>
+	var exampleVM2 = new Vue({
+		el : '#example',
+		data : {
+			msg : '内容是在5000ms后才改变的~'
+		}
+	})
+</script>
